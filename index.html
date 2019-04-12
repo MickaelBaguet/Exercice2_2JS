@@ -8,7 +8,16 @@
   <form>
     <label for="lastname">Votre nom  : </label>
     <!-- Utilisation de la méthode blur qui détecte la perte de focus et lance une alert -->
-    <input type="text" name="lastname" id="lastname" onBlur="alert('Merci de votre participation !')"/>
+    <input type="text" name="lastname" id="lastname"/>
   </form>
+
+  <script type="text/javascript">
+    var popup = document.getElementById('lastname');
+    // Fonction s'effectuant sur la perte de focus (blur) sur la zone de texte
+    popup.addEventListener('blur', function()
+    {
+      alert('Merci de votre participation !');
+    });
+  </script>
 </body>
 </html>
